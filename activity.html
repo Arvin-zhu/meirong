@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+	<title>最新活动</title>
+</head>
+<body>
+	<div id="container7">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background:url(images/activity.png) no-repeat;background-size: 100% 100%">
+					<div class="title">活动名称</div>
+					<div class="btn"><a href="info.html">查看详情</a></div>
+				</div>
+				<div class="swiper-slide" style="background:url(images/activity.png) no-repeat;background-size: 100% 100%">
+					<div class="title">活动名称</div>
+					<div class="btn"><a href="info.html">查看详情</a></div>
+				</div>
+				<div class="swiper-slide" style="background:url(images/activity.png) no-repeat;background-size: 100% 100%">
+					<div class="title">活动名称</div>
+					<div class="btn"><a href="info.html">查看详情</a></div>
+				</div>
+				<div class="swiper-slide" style="background:url(images/activity.png) no-repeat;background-size: 100% 100%">
+					<div class="title">活动名称</div>
+					<div class="btn"><a href="info.html">查看详情</a></div>
+				</div>
+				<div class="swiper-slide" style="background:url(images/activity.png) no-repeat;background-size: 100% 100%">
+					<div class="title">活动名称</div>
+					<div class="btn"><a href="info.html">查看详情</a></div>
+				</div>
+				<div class="swiper-slide" style="background:url(images/activity.png) no-repeat;background-size: 100% 100%">
+					<div class="title">活动名称</div>
+					<div class="btn"><a href="info.html">查看详情</a></div>
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<script>
+		window.onload=function(){
+				var swiper = new Swiper('.swiper-container', {
+					pagination: '.swiper-pagination',
+					paginationType: 'fraction',
+					effect: 'coverflow',
+					grabCursor: true,
+					centeredSlides: true,
+					slidesPerView: "auto",
+					coverflow: {
+						rotate: 0,
+						stretch: 0,
+						depth: 300,
+						modifier: 1,
+						slideShadows: false
+					},
+					onInit: function (swiper) {
+						var centerSlider = parseInt(swiper.slides.length/2);
+						swiper.slideTo(centerSlider,0,false);//初始化时居中
+						//$(".sw-page").html("<i>"+(swiper.activeIndex+1)+"/"+swiper.slides.length+"</i>");
+					},
+					onTap: function (swiper) {
+						var curIndex = swiper.clickedIndex;
+						if(curIndex != undefined){
+							swiper.slideTo(curIndex);
+							//$(".sw-page").html("<i>"+(swiper.activeIndex+1)+"/"+swiper.slides.length+"</i>");
+						}
+					}
+				})
+		}
+	</script>
+</body>
+</html>

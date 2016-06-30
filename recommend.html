@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,
+    minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <title>美容推荐</title>
+</head>
+<body>
+    <div id="container1">
+        <div class="head">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide active"><span>全部推荐</span></div>
+                    <div class="swiper-slide"><span>套餐</span></div>
+                    <div class="swiper-slide"><span>身体</span></div>
+                    <div class="swiper-slide"><span>面部</span></div>
+                    <div class="swiper-slide"><span>腿部</span></div>
+                    <div class="swiper-slide"><span>背部</span></div>
+                    <div class="swiper-slide"><span>脚步</span></div>
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <div class="pic">
+                    <div class="logo">面部</div>
+                </div>
+                <div class="word"><p>活力塑·小V脸</p></div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="logo">面部</div>
+                </div>
+                <div class="word"><p>活力塑·小V脸</p></div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="logo">面部</div>
+                </div>
+                <div class="word"><p>活力塑·小V脸</p></div>
+            </li>
+        </ul>
+    </div>
+<script>
+    window.onload=function(){
+        container1();
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView:'auto',
+            freeMode: true
+        });
+    }
+</script>
+</body>
+</html>
